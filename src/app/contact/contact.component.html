@@ -9,13 +9,15 @@
     <input type="text" formControlName="name">
     <div *ngIf="submitted && messageForm.controls.name.errors" class="error">
       <div *ngIf="messageForm.controls.name.errors.required">Your name is required!</div>
+    </div>
   </label>
 
   <label>
     Message:
     <textarea formControlName="message"></textarea>
     <div *ngIf="submitted && messageForm.controls.message.errors" class="error">
-      <div *ngIf="messageForm.controls.message.errors.required">Your message is required!</div>
+      <div *ngIf="messageForm.controls.message.errors.required">A message is required</div>
+    </div>
   </label>
 
   <input type="submit" class="cta" value="Send Message">
